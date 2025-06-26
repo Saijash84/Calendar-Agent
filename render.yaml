@@ -1,11 +1,7 @@
 services:
   - type: web
-    name: calendar-agent
+    name: calendar-api
     env: python
     plan: free
-    region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host=0.0.0.0 --port=$PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
+    startCommand: uvicorn main:app --host=0.0.0.0 --port=10000
