@@ -14,7 +14,7 @@ from database import save_booking, get_last_booking, cancel_booking, update_book
 
 # If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-CREDENTIALS_FILE = 'credentials.json'
+CREDENTIALS_FILE = json.loads(os.environ["GOOGLE_CREDS"])
 TOKEN_FILE = 'token.json'
 
 class GoogleCalendarUtils:
