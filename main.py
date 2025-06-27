@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from agent import handle_user_message
 from database import init_db
-
+import json
 app = FastAPI()
 init_db()
 
