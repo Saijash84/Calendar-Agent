@@ -5,6 +5,7 @@ import re
 import dateparser
 import pytz
 import logging
+import json
 
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -15,7 +16,6 @@ from database import save_booking, get_last_booking, cancel_booking, update_book
 # If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 CREDENTIALS_FILE = 'credentials.json'
-TOKEN_FILE = 'token.json'
 
 class GoogleCalendarUtils:
     """
